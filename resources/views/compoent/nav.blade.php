@@ -27,14 +27,39 @@
       <li class="nav-item {{ Request::is('sell/car') ? 'active' : '' }}">
         <a class="nav-link " href="/sell/car">Sell Your Car</a>
       </li>
+      @guest
+        <li class="nav-item {{ Request::is('login') ? 'active' : '' }}">
+          <a class="nav-link " href="login">Login</a>
+        </li>
 
-      <li class="nav-item {{ Request::is('login') ? 'active' : '' }}">
-        <a class="nav-link " href="login">Login</a>
+        <li class="nav-item {{ Request::is('register') ? 'active' : '' }}">
+          <a class="nav-link " href="register">Register</a>
+        </li>
+      @endguest
+
+      @auth
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+       {{ auth()->user()->name }}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Dashboard</a>
+          <a class="dropdown-item" href="#">Order </a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+        </div>
       </li>
 
-      <li class="nav-item {{ Request::is('register') ? 'active' : '' }}">
-        <a class="nav-link " href="register">Register</a>
-      </li>
+      @endauth
     </ul>
       
  

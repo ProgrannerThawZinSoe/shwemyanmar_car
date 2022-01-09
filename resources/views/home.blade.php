@@ -1,6 +1,7 @@
 @extends('compoent.main')
 
 @section('content')
+
 <div class="container" style="margin-top:40px">
     <div class="row justify-content-center">
         <div class="col-md-8">
