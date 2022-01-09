@@ -27,4 +27,13 @@ Route::get("/sell/car",function(){
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// auth middleware 
+Route::middleware(['auth'])->group(function () {
+
+    Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+    Route::get('/order', [App\Http\Controllers\HomeController::class, 'order'])->name('order');
+
+    Route::get('/setting', [App\Http\Controllers\HomeController::class, 'setting'])->name('setting');
+});

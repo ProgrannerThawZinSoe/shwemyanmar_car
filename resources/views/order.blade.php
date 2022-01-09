@@ -9,10 +9,10 @@
             <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
                 <li class="nav-item">
-                    <a class="nav-link active" href="/dashboard">Dashboard</a>
+                    <a class="nav-link " href="/dashboard">Dashboard</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/order">Orders</a>
+                    <a class="nav-link active" href="/order">Orders</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="/setting">Setting</a>

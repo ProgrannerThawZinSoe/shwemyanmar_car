@@ -44,8 +44,8 @@
        {{ auth()->user()->name }}
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Dashboard</a>
-          <a class="dropdown-item" href="#">Order </a>
+          <a class="dropdown-item" href="/dashboard">Dashboard</a>
+          <a class="dropdown-item" href="/order">Order </a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
