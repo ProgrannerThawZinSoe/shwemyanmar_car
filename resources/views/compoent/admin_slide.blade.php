@@ -51,12 +51,25 @@
                 </ul>
               
 
-                 <li data-toggle="collapse" data-target="#acc" class="collapsed">
-                  <a href="#"><i class="fa fa-logout fa-lg"></i> Service <span class="arrow"></span></a>
+             
+                
+                <li data-toggle="collapse" data-target="#web" class="collapsed">
+                  <a href="#"><i class="fa fa-globe" aria-hidden="true"></i> Web Setting <span class="arrow"></span></a>
+                </li>
+                <ul class="sub-menu collapse" id="web">
+               
+                  <li>Page Content</li>
+                  <li>SEO</li>
+                  <li>Privacy Page</li>
+                  <li>Color and Fonts</li> 
+                </ul>
+
+                <li data-toggle="collapse" data-target="#acc" class="collapsed">
+                  <a href="#"><i class="fa fa-sliders fa-lg"></i> Setting <span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse" id="acc">
-                  <li>Member List</li>
-                  <li>Buyer</li>
+                  <li>Account Setting</li>
+                  <li>Logout</li>
                 </ul>
 
             </ul>
