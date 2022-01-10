@@ -1,3 +1,4 @@
+@if ( auth()->user()->role == 1)
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +21,7 @@
   width: 300px;
   height: 100%;
   color: #e1ffff;
+  display:block;
 }
 .nav-side-menu .brand {
   background-color: #23282e;
@@ -308,10 +310,24 @@ body {
 </head>
 <body>
 
+<div class="container-fluid" style="margin-left:0px;padding-left:0px;">
+  <div class="row">
+    <div class="col-md-3">
+       @include('compoent.admin_slide')
+    </div>
+    <div class="col-md-7">
+      @yield('content')
 
-    @yield('content')
+     
+         <h3>Hello</h3>
 
-    @include('compoent.admin_slide')
+    </div>
+  </div>
+<div>
+
+
+
+    
 
 
 
@@ -321,3 +337,11 @@ body {
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
+
+@endif
+@if ( auth()->user()->role == 0)
+    @php
+        header("Location: " . URL::to('/dashboard'), true, 302);
+        exit();
+    @endphp
+@endif

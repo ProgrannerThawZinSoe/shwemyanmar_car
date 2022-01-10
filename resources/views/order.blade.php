@@ -1,7 +1,7 @@
 @extends('compoent.main')
 
 @section('content')
-
+@if ( auth()->user()->role == 0)
 <div class="container" style="margin-top:40px">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -28,4 +28,11 @@
         </div>
     </div>
 </div>
+@endif
+@if ( auth()->user()->role == 1)
+@php
+        header("Location: " . URL::to('/admin/dashboard'), true, 302);
+        exit();
+    @endphp
+@endif
 @endsection

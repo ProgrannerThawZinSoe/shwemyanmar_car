@@ -36,6 +36,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/order', [App\Http\Controllers\HomeController::class, 'order'])->name('order');
 
     Route::get('/setting', [App\Http\Controllers\HomeController::class, 'setting'])->name('setting');
+
+    //admin routes
+    Route::get("/admin/dashboard",[App\Http\Controllers\AdminPageController::class, 'index'])->name('admin-index');
 });
 
-Route::get("/admin/dashboard",[App\Http\Controllers\AdminPageController::class, 'index'])->name('admin-index');

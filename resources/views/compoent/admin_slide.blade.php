@@ -1,5 +1,5 @@
 <div class="nav-side-menu">
-    <div class="brand">Press Curing Control</div>
+    <div class="brand">ShweMyanmar CarShowRoom</div>
     <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
   
         <div class="menu-list">
@@ -46,7 +46,8 @@
                   <a href="#"><i class="fa fa-user fa-lg"></i> Member <span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse" id="member">
-                <li>Member List</li>
+                    <li>Admin Account </li>
+                    <li>Member List</li>
                   <li>Buyer</li>
                 </ul>
               
