@@ -319,7 +319,7 @@ body {
       @yield('content')
 
      
-         <h3>Hello</h3>
+        
 
     </div>
   </div>
