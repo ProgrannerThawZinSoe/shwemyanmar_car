@@ -6,10 +6,25 @@
   
             <ul id="menu-content" class="menu-content collapse out">
                 <li>
-                  <a href="#">
+                <a href="#">
                   <i class="fa fa-dashboard fa-lg"></i> Dashboard
                   </a>
+                 
+                  
                 </li>
+
+                <li>
+                <a href="/" target="_blank">
+                   Web page
+                  </a>
+                </li>
+
+                <li>
+                <a href="#">
+                  {{ auth()->user()->name }}
+                  </a>
+                </li>
+                
 
                 <li  data-toggle="collapse" data-target="#products" class="collapsed ">
                   <a href="#"><i class="fa fa-phone fa-lg"></i> Contact From Seller <span class="arrow"></span></a>
@@ -46,8 +61,8 @@
                   <a href="#"><i class="fa fa-user fa-lg"></i> Member <span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse" id="member">
-                    <li>Admin Account </li>
-                    <li>Member List</li>
+                    <li><a href="">Make Admin</a></li>
+                    <li> <a href="/admin/member/all">Member List </a></li>
                   <li>Buyer</li>
                 </ul>
               

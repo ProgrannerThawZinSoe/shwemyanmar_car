@@ -8,6 +8,8 @@
     <title>@yield('title')</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
     <!-- Style -->
     <style>
        .nav-side-menu {
@@ -316,6 +318,13 @@ body {
        @include('compoent.admin_slide')
     </div>
     <div class="col-md-7">
+
+      @if(session('info'))
+        <div class="alert alert-info" style="margin-top:50px">
+          {{session('info')}}
+        </div>
+      @endif
+
       @yield('content')
 
      

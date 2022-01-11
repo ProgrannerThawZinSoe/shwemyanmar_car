@@ -38,6 +38,24 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/setting', [App\Http\Controllers\HomeController::class, 'setting'])->name('setting');
 
     //admin routes
-    Route::get("/admin/dashboard",[App\Http\Controllers\AdminPageController::class, 'index'])->name('admin-index');
+
+    Route::prefix('admin')->group(function () {
+        Route::get("/dashboard",[App\Http\Controllers\AdminPageController::class, 'index'])->name('admin-index');
+
+        // Members
+        
+        //See
+        Route::get("/member/all",[App\Http\Controllers\AdminPageController::class, 'member_all'])->name('admin-member-all');
+
+        //delete
+        Route::get('/member/{id}/delete',[App\Http\Controllers\AdminPageController::class, 'member_delete'])->name('admin-member-delete');
+
+        //Promote
+        Route::get('/member/{id}/promote-admin',[App\Http\Controllers\AdminPageController::class, 'member_promote'])->name('admin-member-promote');
+
+         // Members
+         Route::get('/member/{id}/change-member',[App\Http\Controllers\AdminPageController::class, 'change_member'])->name('admin-member-change');
+    });
+    
 });
 
