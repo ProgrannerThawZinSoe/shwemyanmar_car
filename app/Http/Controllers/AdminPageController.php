@@ -13,7 +13,7 @@ class AdminPageController extends Controller
     }
 
     public function member_all(){
-       $users = User::all();
+       $users = User::orderBy('id','DESC')->get();
        return view("admin.member_all",["users"=>$users]);
     }
 
