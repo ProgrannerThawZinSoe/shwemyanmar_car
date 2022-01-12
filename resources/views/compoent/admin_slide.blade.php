@@ -53,7 +53,7 @@
                   <a href="#"><i class="fa fa-car fa-lg"></i> Category and Car List <span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse" id="new">
-                  <li>Category and Subcategory</li>
+                  <li><a href="/admin/category">Category</a></li>   
                   <li>Car List</li>
                 </ul>
 
@@ -61,7 +61,6 @@
                   <a href="#"><i class="fa fa-user fa-lg"></i> Member <span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse" id="member">
-                    <li><a href="">Make Admin</a></li>
                     <li> <a href="/admin/member/all">Member List </a></li>
                   <li>Buyer</li>
                 </ul>
